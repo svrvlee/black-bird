@@ -8,12 +8,12 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'black-bird/static/js/bundle.[hash:8].min.js',
+    filename: 'static/js/bundle.[hash:8].min.js',
   },
   plugins: [
     new CleanWebpackPlugin('build'),
     new ExtractTextPlugin({
-      filename: 'black-bird/static/css/styles.[hash:8].min.css'
+      filename: 'static/css/styles.[hash:8].min.css'
     }),
     new HtmlWebpackPlugin({
       template: './src/index.pug',
@@ -50,7 +50,7 @@ module.exports = {
         test: /\.(jpg|png|svg)$/,
         loader: 'file-loader',
         query: {
-          outputPath: 'black-bird/static/images/',
+          outputPath: 'static/images/',
           name: '[name].[ext]',
         },
       },
