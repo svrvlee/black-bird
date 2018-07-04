@@ -1,0 +1,228 @@
+// Base Styles
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: #ccc;
+  font-weight: 300;
+}
+  
+
+figure {
+  margin: auto
+}
+  
+
+.content {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-bottom: 400px;
+  article {
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+    
+  img {
+    max-width: 100%;
+  }
+}
+
+
+// Parallax
+
+.bird-box {
+  position: relative;
+  height: 600px;
+  background-image: url(../images/bird-bg.jpg);
+    size: auto 600px;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 3;
+    // so the wood is hidden
+}
+
+.logo {
+  height: 100px;
+  width: 100%;
+  background-image: url(../images/black-bird-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: fixed;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.fore-bird {
+  width: 960px;
+  height: 733px;
+  background-image: url(../images/fore-bird.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: absolute;
+  left: 50%;
+  top: 380px;
+  margin-left: -480px;
+}
+
+.back-bird {
+  width: 960px;
+  height: 298px;
+  background-image: url(../images/back-bird.png);
+  background-repeat: no-repeat;
+  position: top left;
+  position: absolute;
+  left: 50%;
+  margin-left: -480px;
+}
+
+
+// model grid
+
+.clothes-pics figure {
+  margin-bottom: 100px;
+  position: relative;
+  left: -30px;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+
+  &.is-showing {
+    transform: translateX(30px);
+    opacity: 1;
+  }  
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+    figcaption {
+    left: 0%;
+  }
+}
+.card {
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: -100%;
+  background:black;
+  color: white;
+  padding: 2px 8px;
+  font-size: 11px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+// large-window
+
+.large-window {
+  height: 640px;
+  background-image: url('../images/model1.jpg');
+  background-position: top center;
+  // x,y axis, can be 0px center as well
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  // magic ^^
+  margin-top: 100px;
+  margin-bottom: 100px;
+  // to put space between the end of promoscope and beginning of paragraph
+  border-radius: 50%;
+  position: relative;
+  // always have pos. rel to absol. vice versa
+}
+
+.window-tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-text { 
+  color: white;
+  font-size: 40px;
+  font-weight: 100;
+  strong {
+    display: block;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  span {
+    font-weight: 300;
+    size: 18px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.window-cta {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  //  if ur going to put border around buttons u need them to have padding
+  padding: 10px 20px;
+  transition: all .3s ease-in-out;
+  
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+// & is the before mentioned class and need it for actions
+
+// posts
+
+.blog-posts {
+  margin-top: 100px;
+    .post {
+      border: 1px solid #e1e1e1;
+      padding: 20px 20px 0;
+      background: white;
+      position: relative;
+    }
+    .post-1 {
+      transform: translate(100px, 20px);
+    }
+    .post-2 {
+      z-index: 2;
+    }
+    .post-3 {
+      transform: translate(-100px, 20px);
+    }
+}
+
+// footer
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  .footer-stuff {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  a {
+    color: white;
+  }
+}
+.email  {
+  color: black;
+}
